@@ -2,15 +2,15 @@
 
 ## Time Estimates
 ```
-Number and name of feature: 
+Number and name of feature: Create header
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: 20 min
 
-Start time: 
+Start time: 10 am
 
-Finish time: 
+Finish time: 10:20 am
 
-Actual time needed to complete: 
+Actual time needed to complete: 20 min
 ```
 
 ---
