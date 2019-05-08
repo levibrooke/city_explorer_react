@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Search from './Search';
+import Map from './Map';
 
 class Main extends Component {
   constructor(props) {
@@ -10,6 +11,7 @@ class Main extends Component {
     return (
       <main>
         <Search />
+        <Map />
       </main>
     )
   }
