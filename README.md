@@ -1,3 +1,20 @@
+# Lab 12: City Explorer React
+
+## Time Estimates
+```
+Number and name of feature: 
+
+Estimate of time needed to complete: 
+
+Start time: 
+
+Finish time: 
+
+Actual time needed to complete: 
+```
+
+---
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
