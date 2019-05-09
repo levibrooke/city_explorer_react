@@ -9,12 +9,13 @@ class App extends Component {
     super(props);
 
     this.state = {
-      location: {}
+      location: {},
+      hasLocation: false
     }
   }
 
   handleLocation = (location) => {
-    this.setState({ location });
+    this.setState({ location, hasLocation: true });
   }
 
   render() {
@@ -25,7 +26,10 @@ class App extends Component {
           <SearchForm
             saveLocation={this.handleLocation}
           />
-          <Map />
+          {this.state.hasLocation && <Map 
+            lat={this.state.location.latitude}
+            long={this.state.location.longitude}
+          />}
           <SearchResults />
         </main>
       </Fragment>
