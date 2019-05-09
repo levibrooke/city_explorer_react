@@ -9,8 +9,12 @@ class App extends Component {
     super(props);
 
     this.state = {
-      searchQuery: ''
+      location: {}
     }
+  }
+
+  handleLocation = (location) => {
+    this.setState({ location });
   }
 
   render() {
@@ -18,7 +22,9 @@ class App extends Component {
       <Fragment>
         <Header />
         <main>
-          <SearchForm />
+          <SearchForm
+            saveLocation={this.handleLocation}
+          />
           <Map />
           <SearchResults />
         </main>
