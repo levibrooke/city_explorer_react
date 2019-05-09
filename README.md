@@ -13,6 +13,17 @@ Finish time: 10:20 am
 
 Actual time needed to complete: 20 min
 ```
+```
+Number and name of feature: Search form
+
+Estimate of time needed to complete: 45 min
+
+Start time: 10:30 am
+
+Finish time: 11:30 am
+
+Actual time needed to complete: 60 min
+```
 
 ### Part 1
 ```
