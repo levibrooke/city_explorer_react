@@ -8,15 +8,23 @@ class App extends Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      location: {}
+    }
   }
 
+  handleLocation = (location) => {
+    this.setState({ location });
+  }
 
   render() {
     return (
       <Fragment>
         <Header />
         <main>
-          <SearchForm />
+          <SearchForm
+            saveLocation={this.handleLocation}
+          />
           <Map />
           <SearchResults />
         </main>

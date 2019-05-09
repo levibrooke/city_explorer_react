@@ -8,27 +8,38 @@ class SearchForm extends Component {
     this.state = {
       searchQuery: ''
     }
+    this.endpoint = `${process.env.REACT_APP_SERVER}`;
   }
 
   handleLocationInput = (e) => {
+    e.preventDefault();
     this.setState({ searchQuery: e.target.value });
   }
 
-  handleSubmit = () => {
+  handleSubmit = (e) => {
+    e.preventDefault();
 
+    superagent.get(`${this.endpoint}/location`)
+      .query({ data: this.state.searchQuery})
+      .then(res => {
+        console.log('res', res);
+        this.props.saveLocation(res.body);
+      })
+      .catch(err => {
+        console.log('err', err);
+      });
   }
 
   render() {
     return (
-      <form id="search-form">
+      <form id="search-form" onSubmit={this.handleSubmit}>
         <label htmlFor="search">Search for a location</label>
         <input 
           type="text" 
           name="search" 
           id="input-search" 
           placeholder="Enter a location here" 
-          onChange={this.updateInput}
-          onSubmit={this.handleSubmit}
+          onChange={this.handleLocationInput}
         />
         <button type="submit">Explore!</button>
       </form>
