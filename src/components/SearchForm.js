@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Search extends Component {
+class SearchForm extends Component {
 
   render() {
     return (
@@ -13,4 +13,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default SearchForm;
