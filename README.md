@@ -24,6 +24,17 @@ Finish time: 11:30 am
 
 Actual time needed to complete: 60 min
 ```
+```
+Number and name of feature: Map
+
+Estimate of time needed to complete: 30 min
+
+Start time: 12:30 pm
+
+Finish time: 1:00 apm
+
+Actual time needed to complete: 30 min
+```
 
 ### Part 1
 ```
