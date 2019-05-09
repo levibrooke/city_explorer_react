@@ -1,6 +1,20 @@
-# Lab 12: City Explorer React
+# Lab 12 & 13: City Explorer React
 
 ## Time Estimates
+### Part 2
+```
+Number and name of feature: Refactor structure
+
+Estimate of time needed to complete: 20 min
+
+Start time: 10 am
+
+Finish time: 10:20 am
+
+Actual time needed to complete: 20 min
+```
+
+### Part 1
 ```
 Number and name of feature: Create header
 
