@@ -31,7 +31,10 @@ class App extends Component {
             lat={this.state.location.latitude}
             long={this.state.location.longitude}
           />}
-          <SearchResults />
+          <SearchResults 
+            hasLocation={this.state.hasLocation}
+            location={this.state.location}
+          />
         </main>
       </Fragment>
     )

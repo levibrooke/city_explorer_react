@@ -13,11 +13,26 @@ class SearchResults extends Component {
       <Fragment>
         {/* error container reminder comment */}
         <div className="column-container">
-          <DarkSky />
-          <Yelp />
-          <Eventbrite />
-          <MovieDB />
-          <Hiking />
+          <DarkSky 
+            hasLocation={this.props.hasLocation}
+            location={this.props.location} 
+          />
+          <Yelp 
+            hasLocation={this.props.hasLocation}
+            location={this.props.location}
+          />
+          <Eventbrite
+            hasLocation={this.props.hasLocation}
+            location={this.props.location}
+          />
+          <MovieDB 
+            hasLocation={this.props.hasLocation}
+            location={this.props.location}
+          />
+          <Hiking 
+            hasLocation={this.props.hasLocation}
+            location={this.props.location}
+          />
         </div>
       </Fragment>
     )
