@@ -1,13 +1,24 @@
 .column-container {
   display: flex;
-}
+  flex-flow: row nowrap;
 
-.column-container section {
-  display: inline-block;
-  width: 100%;
-  border-style: groove;
-  margin: 5px;
-  background-color: #FFF;
+  section {
+    display: flex;
+    flex-flow: column;
+    width: 25%;
+    border-style: groove;
+    margin: 20px;
+    padding: 20px;
+    background-color: #FFF;
+
+    ul {
+      margin: 20px 0;
+    }
+
+    li {
+      margin: 20px 0;
+    }
+  }
 }
 
 .query-placeholder, form, header, h3 {
@@ -16,18 +27,4 @@
 
 form {
   margin: 10px auto;
-}
-
-.hide {
-  display: none;
-}
-
-#input-search {
-  padding: 5px;
-  border: 1px solid #4484CE;
-}
-
-#map {
-  margin-top: 10px;
-  border: 2px solid #4484CE;
 }

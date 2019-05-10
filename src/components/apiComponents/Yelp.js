@@ -14,7 +14,10 @@ export default (props) => (
         <li key={id}>
           <a href={restaurant.url} target="_blank" rel="noopener noreferrer">{restaurant.name}</a>
           <p>The average rating is {restaurant.rating} out of 5 and the average cost is {restaurant.price} out of 4</p>
-          <img src={restaurant.image_url} />
+          <img 
+            src={restaurant.image_url} 
+            alt={restaurant.name}
+          />
         </li>
       )
     })}

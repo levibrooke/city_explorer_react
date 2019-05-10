@@ -15,7 +15,10 @@ export default (props) => (
         return (
           <li key={id}>
             <p><span>{movie.title}</span> was relased on {movie.released_on}. Out of {movie.total_votes} total votes, {movie.title} has an average vote of {movie.average_votes} and a popularity score of {movie.popularity}.</p>
-            <img src={fixedImageUrl} />
+            <img 
+              src={fixedImageUrl} 
+              alt={movie.title}
+            />
             <p>{movie.overview}</p>
           </li>
         )
