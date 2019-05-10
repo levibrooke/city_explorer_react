@@ -12,7 +12,7 @@ export default (props) => (
     {props.data.map((restaurant, id) => {
       return (
         <li key={id}>
-          <a href={restaurant.url}>{restaurant.name}</a>
+          <a href={restaurant.url} target="_blank">{restaurant.name}</a>
           <p>The average rating is {restaurant.rating} out of 5 and the average cost is {restaurant.price} out of 4</p>
           <img src={restaurant.image_url} />
         </li>
