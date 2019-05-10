@@ -31,10 +31,25 @@ class App extends Component {
             lat={this.state.location.latitude}
             long={this.state.location.longitude}
           />}
-          <SearchResults 
-            hasLocation={this.state.hasLocation}
-            location={this.state.location}
-          />
+          {/* error container reminder comment */}
+          <div className="column-container">
+            <SearchResults 
+              apiName={"weather"}
+              location={this.state.location}
+            />
+            <SearchResults 
+              apiName={"yelp"}
+              location={this.state.location}
+            />
+            <SearchResults 
+              apiName={"movies"}
+              location={this.state.location}
+            />
+            <SearchResults 
+              apiName={"trails"}
+              location={this.state.location}
+            />
+          </div>
         </main>
       </Fragment>
     )
