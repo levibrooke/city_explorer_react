@@ -49,8 +49,8 @@ class SearchResults extends Component {
 
     return (
       <Fragment>
-        {this.state.hasResult && 
-          <ApiComponent 
+        {(this.state.hasResult || this.state.hasError) && 
+          <ApiComponent
             data={this.state.result} 
             error={this.state.hasError} 
           />
