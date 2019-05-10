@@ -1,0 +1,20 @@
+/* Style the yelp images */
+div section:nth-child(2) img {
+  height: 75px;
+  padding-bottom: 3px;
+}
+
+/* Style the movie images */
+div section:nth-child(4) img {
+  height: 150px;
+}
+
+#input-search {
+  margin-bottom: 40px;
+  border: 1px solid $nord9;
+}
+
+#map {
+  margin-bottom: 40px;
+  border: 2px solid $nord9;
+}
