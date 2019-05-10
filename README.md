@@ -1,6 +1,30 @@
 # Lab 12 & 13: City Explorer React
 
 ## Time Estimates
+### Part 3
+```
+Number and name of feature: Add results components for APIs
+
+Estimate of time needed to complete: 90 min
+
+Start time: 9:30 am
+
+Finish time: 11:30 am
+
+Actual time needed to complete: 2 hours
+```
+```
+Number and name of feature: Add style
+
+Estimate of time needed to complete: 30 min
+
+Start time: 11:30 am
+
+Finish time: 12:00 pm
+
+Actual time needed to complete: 30 min
+```
+
 ### Part 2
 ```
 Number and name of feature: Refactor structure
@@ -59,6 +83,9 @@ Finish time: 11:20 am
 
 Actual time needed to complete: 50 min
 ```
+
+## Acknowledgements
+- Utilized Nord color pallete from [Arctic Ice Studio](https://www.nordtheme.com/docs/colors-and-palettes)
 
 ---
 
