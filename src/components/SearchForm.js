@@ -22,7 +22,6 @@ class SearchForm extends Component {
     superagent.get(`${this.endpoint}/location`)
       .query({ data: this.state.searchQuery})
       .then(res => {
-        console.log('res', res);
         this.props.saveLocation(res.body);
       })
       .catch(err => {

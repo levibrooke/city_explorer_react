@@ -1,19 +1,60 @@
 import React, { Component, Fragment } from 'react';
-import Result from './Result.js';
+import superagent from 'superagent';
+
+import DarkSky from './apiComponents/DarkSky.js';
+import Hiking from './apiComponents/Hiking.js';
+import MovieDB from './apiComponents/MovieDB.js';
+import Yelp from './apiComponents/Yelp.js';
 
 class SearchResults extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hasResult: false,
+      result: [],
+      hasError: false
+    }
+
+    this.server = `${process.env.REACT_APP_SERVER}`;
+  }
+
+  components = {
+    weather: DarkSky,
+    yelp: Yelp,
+    movies: MovieDB,
+    trails: Hiking
+  }
+  
+  componentDidUpdate = (prevProps) => {
+    if (prevProps.location.id !== this.props.location.id) {
+      this.fetchWeather(this.props.location, this.props.apiName);
+    }
+  }
+
+  fetchWeather = async (data, endpoint) => {
+    await superagent.get(`${this.server}/${endpoint}`)
+      .query({ data })
+      .then(res => {
+        this.setState({ hasResult: true, result: res.body });
+      })
+      .catch(err => {
+        console.log('err', err)
+        this.setState({ hasError: true });
+      });
+  }
 
   render() {
+    const ApiComponent = this.components[this.props.apiName];
+
     return (
       <Fragment>
-        {/* error container reminder comment */}
-        <div className="column-container">
-          <Result api={'weather'} apiName={'Dark Sky API'} />
-          <Result api={'yelp'} apiName={'Yelp API'} />
-          <Result api={'events'} apiName={'Eventbrite API'} />
-          <Result api={'movies'} apiName={'Movie DB API'} />
-          <Result api={'trails'} apiName={'Hiking Project API'} />
-        </div>
+        {(this.state.hasResult || this.state.hasError) && 
+          <ApiComponent
+            data={this.state.result} 
+            error={this.state.hasError} 
+          />
+        }
       </Fragment>
     )
   }
