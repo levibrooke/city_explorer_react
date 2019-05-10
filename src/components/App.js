@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+
 import Header from './Header.js';
 import SearchForm from './SearchForm.js';
 import Map from './Map.js';
@@ -30,7 +31,25 @@ class App extends Component {
             lat={this.state.location.latitude}
             long={this.state.location.longitude}
           />}
-          <SearchResults />
+          {/* error container reminder comment */}
+          <div className="column-container">
+            <SearchResults 
+              apiName={"weather"}
+              location={this.state.location}
+            />
+            <SearchResults 
+              apiName={"yelp"}
+              location={this.state.location}
+            />
+            <SearchResults 
+              apiName={"movies"}
+              location={this.state.location}
+            />
+            <SearchResults 
+              apiName={"trails"}
+              location={this.state.location}
+            />
+          </div>
         </main>
       </Fragment>
     )
